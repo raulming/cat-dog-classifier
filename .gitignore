@@ -1,0 +1,2 @@
+//使用*通配多个字符，把仓库下所有node_modules忽略掉
+*node_modules/*
