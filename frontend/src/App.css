@@ -1,0 +1,153 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Arial', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.App.light {
+  background: linear-gradient(45deg, #64b3f4, #c2e59c);
+  color: #333;
+}
+
+.App.dark {
+  background: linear-gradient(45deg, #0f2027, #203a43, #2c5364);
+  color: white;
+}
+
+.App-header {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  animation: pulse 2s infinite;
+}
+
+.upload-form {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.upload-form:hover {
+  transform: translateY(-5px);
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  border: 2px solid;
+  display: inline-block;
+  padding: 12px 24px;  /* 增加内边距 */
+  cursor: pointer;
+  background: transparent;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;  /* 增大字体 */
+}
+
+.light .custom-file-upload {
+  border-color: #333;
+  color: #333;
+}
+
+.dark .custom-file-upload {
+  border-color: white;
+  color: white;
+}
+
+.custom-file-upload:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+button {
+  margin-top: 1rem;
+  padding: 15px 30px;  /* 增加内边距 */
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 1.2rem;  /* 增大字体 */
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.result {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 15px 25px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.light .result {
+  color: #333;
+  border: 2px solid #333;
+}
+
+.dark .result {
+  color: white;
+  border: 2px solid white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.image-preview {
+  max-width: 300px;  /* 增大最大宽度 */
+  max-height: 300px;  /* 增大最大高度 */
+  margin-top: 20px;  /* 增加上边距 */
+  border-radius: 10px;  /* 添加圆角 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* 添加阴影效果 */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
